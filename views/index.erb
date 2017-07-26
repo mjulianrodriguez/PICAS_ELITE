@@ -10,15 +10,25 @@
 			<td><tr><form action="/jugar" method="post">		
 			<td><tr><h2>Intento No</h2></tr></td>
 			<td><tr>
-				<input type="number" name="numeroJugado" min="1000" max="9999">
-				<h5><%= params['msgError'] %></h5>
+				<input type="number" name="numeroJugado" min="0" max="9999">
+				<h5><%= session['msgError'] %></h5>
 			</tr></td>
 			<td><tr><h3>Resultado Parcial</h3></tr></td>
 			<td><tr><p><h3> Numero digitado <%= params['numeroJugado'] %> <%= session['resultado'] %> </h3></tr></td>
-			<td><tr><p><h4> <%= params['limiteIntentos'] %></tr></td>
-			<td><tr><p><h4> <%= params['intentosAcumulados'] %></h5></tr></td>
-			<td><tr><p><h4> <%= params['intentosRestantes'] %></h6></tr></td>
+			<td><tr><p><h4> <%= session['limiteIntentos'] %></h4></tr></td>
+			<td><tr><p><h4> <%= session['intentosAcumulados'] %></h4></tr></td>
+			<td><tr><p><h4> <%= session['intentosRestantes'] %></h4></tr></td>
 			<td><tr><p><input type="submit" value="Jugar"></tr></td>
+			
+			<table border align="center">
+				<h2>Historico del Juego</h2>
+				<tr>
+					<th>Intento</th> <th>Numero Jugado</th>
+				</tr>
+				<tr>
+					<td><%= params['intentoHistorico'] %></td> <td><%= params['numeroJugado'] %></td>
+				</tr>
+			</table>	
 			</form>
 		</table>
 	</div>
