@@ -15,11 +15,11 @@ Scenario: Cuando digito un numero debo ver el resultado
 	Given Dado que estamos en la interfaz inicial
 	When Digito un numero "1234" 
 	And oprimo "Jugar"
-	Then me debe mostrar "Picas 0 - Fijas 0"
+	Then me debe mostrar "Fallo "
 
-Scenario: Cuando digito un numero debo ver el error por digitos repetidos
+Scenario: Cuando digito un numero y es el numero a adivinar
 	Given Dado que estamos en la interfaz inicial
-	When Digito un numero "1122" 
+	When Digito un numero "5783" 
 	And oprimo "Jugar"
-	Then me debe mostrar "Los digitos no pueden estar repetidos"
+	Then me debe mostrar "Ganaste con el 5783"
 
