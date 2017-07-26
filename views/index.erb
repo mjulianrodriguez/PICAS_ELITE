@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PicasElite</title>
+</head>
+<body>
+	<h1>PICAS ELITE</h1>
+	<form action="/jugar" method="post">		
+		<h2>Intento</h2>
+		<input type="text" name="numeroJugado">
+		<h3>Resultado Parcial</h3>
+		<p><h3> <%= session['resultado'] %> </h3>
+		<p><input type="submit" value="Jugar">
+	</form>
+</body>
+</html>
