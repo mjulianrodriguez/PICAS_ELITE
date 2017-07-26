@@ -4,7 +4,7 @@ describe Juego do
 	    #arrange
         miJuego = Juego.new
         #act
-        result=miJuego.compara 1234
+        result=miJuego.compara "1234"
         #assert
         expect(result).to eq "Picas 1 - Fijas 0"
     end
@@ -13,7 +13,7 @@ describe Juego do
 	    #arrange
         miJuego = Juego.new
         #act
-        result=miJuego.compara 5120
+        result=miJuego.compara "5120"
         #assert
         expect(result).to eq "Picas 0 - Fijas 1"
     end
@@ -22,7 +22,7 @@ describe Juego do
 	    #arrange
         miJuego = Juego.new
         #act
-        result=miJuego.compara 3759
+        result=miJuego.compara "3759"
         #assert
         expect(result).to eq "Picas 2 - Fijas 1"
     end
@@ -31,7 +31,7 @@ describe Juego do
 	    #arrange
         miJuego = Juego.new
         #act
-        result=miJuego.compara 3875
+        result=miJuego.compara "3875"
         #assert
         expect(result).to eq "Picas 4 - Fijas 0"
     end
@@ -40,15 +40,15 @@ describe Juego do
 	    #arrange
         miJuego = Juego.new
         #act
-        result=miJuego.compara 5783
+        result=miJuego.compara "5783"
         #assert
         expect(result).to eq "Ganaste con el 5783"
     end
-    it "error" do
+    it "0-0" do
 	    #arrange
         miJuego = Juego.new
         #act
-        result=miJuego.compara 1111
+        result=miJuego.compara "1111"
         #assert
         expect(result).to eq "Picas 0 - Fijas 0"
     end
