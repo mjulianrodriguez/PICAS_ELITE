@@ -17,3 +17,9 @@ Scenario: Cuando digito un numero debo ver el resultado
 	And oprimo "Jugar"
 	Then me debe mostrar "Picas 0 - Fijas 0"
 
+Scenario: Cuando digito un numero debo ver el error por digitos repetidos
+	Given Dado que estamos en la interfaz inicial
+	When Digito un numero "1122" 
+	And oprimo "Jugar"
+	Then me debe mostrar "Los digitos no pueden estar repetidos"
+
