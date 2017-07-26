@@ -4,13 +4,23 @@
 	<title>PicasElite</title>
 </head>
 <body>
-	<h1>PICAS ELITE</h1>
-	<form action="/jugar" method="post">		
-		<h2>Intento</h2>
-		<input type="text" name="numeroJugado">
-		<h3>Resultado Parcial</h3>
-		<p><h3> <%= session['resultado'] %> </h3>
-		<p><input type="submit" value="Jugar">
-	</form>
+	<div style="border: 1pt solid #fbb; text-align: center;">
+		<table align="center">
+			<td><tr><h1>PICAS ELITE</h1></tr></td>
+			<td><tr><form action="/jugar" method="post">		
+			<td><tr><h2>Intento No</h2></tr></td>
+			<td><tr>
+				<input type="number" name="numeroJugado" max="4">
+				<h5><%= params['msgError'] %></h5>
+			</tr></td>
+			<td><tr><h3>Resultado Parcial</h3></tr></td>
+			<td><tr><p><h3> Numero digitado <%= params['numeroJugado'] %> <%= session['resultado'] %> </h3></tr></td>
+			<td><tr><p><h4> <%= params['limiteIntentos'] %></tr></td>
+			<td><tr><p><h4> <%= params['intentosAcumulados'] %></h5></tr></td>
+			<td><tr><p><h4> <%= params['intentosRestantes'] %></h6></tr></td>
+			<td><tr><p><input type="submit" value="Jugar"></tr></td>
+			</form>
+		</table>
+	</div>
 </body>
 </html>
