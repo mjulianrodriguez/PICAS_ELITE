@@ -7,11 +7,11 @@ Then(/^debo ver el titulo "([^"]*)"$/) do |texto|
 end
 
 Given(/^Dado que estamos en la interfaz inicial$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit '/'
 end
 
-When(/^Digito un numero "([^"]*)"$/) do |value, field|
-  fill_in(field, :with => value)
+When(/^Digito un numero "([^"]*)"$/) do |value|
+  fill_in("numeroJugado", :with => value)
 end
 
 

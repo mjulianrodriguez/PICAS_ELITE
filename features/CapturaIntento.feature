@@ -13,24 +13,7 @@ Scenario: quiero ver la interfaz grafica
 
 Scenario: Cuando digito un numero debo ver el resultado
 	Given Dado que estamos en la interfaz inicial
-	When Digito un numero "1234" en el campo "numeroJugado"
+	When Digito un numero "1234" 
 	And oprimo "Jugar"
 	Then me debe mostrar "Picas 0 - Fijas 0"
 
-Scenario: Cuando digito otro numero debo ver un resultado diferente
-	Given Dado que estamos en la interfaz inicial
-	When Digito un numero "5678"
-	And oprimo "Jugar"
-	Then me debe mostrar "Picas 2 - Fijas 0"
-
-Scenario: Cuando digito otro numero debo ver otro resultado diferente
-	Given Dado que estamos en la interfaz inicial
-	When Digito un numero "5679"
-	And oprimo "Jugar"
-	Then me debe mostrar "Picas 1 - Fijas 1"
-
-Scenario: Cuando digito otro numero debo ver otro resultado diferente
-	Given Dado que estamos en la interfaz inicial
-	When Digito un numero "0202"
-	And oprimo "Jugar"
-	Then me debe mostrar "Picas 0 - Fijas 2"
