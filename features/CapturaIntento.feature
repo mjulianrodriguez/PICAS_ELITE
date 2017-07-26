@@ -15,7 +15,7 @@ Scenario: Cuando digito un numero debo ver el resultado
 	Given Dado que estamos en la interfaz inicial
 	When Digito un numero "1234" 
 	And oprimo "Jugar"
-	Then me debe mostrar "Fallo "
+	Then me debe mostrar "Picas 1 - Fijas 0"
 
 Scenario: Cuando digito un numero y es el numero a adivinar
 	Given Dado que estamos en la interfaz inicial
